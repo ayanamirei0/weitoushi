@@ -1,0 +1,121 @@
+<import src="../../components/nodata/nodata.wxml"/>
+<view class='home-header'>
+  <view class='time-selectbar'>
+    <view class='tab_bar'>
+      <view data-index='0' bindtap="swichTab" class="{{swiperIndex==0?'bar active':'bar'}}">最热公司</view>
+      <view data-index='1' bindtap="swichTab" class="{{swiperIndex==1?'bar active':'bar'}}">最热概念</view>
+      <view data-index='2' bindtap="swichTab" class="{{swiperIndex==2?'bar active':'bar'}}">明星分析师</view>
+    </view> 
+    <picker class='select-icon' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='picker-in'>
+        <image src='../../static/img/icon/date.png'></image>
+      </view> 
+    </picker>
+  </view>
+</view>
+<swiper current="{{swiperIndex}}" bindchange="swiperChange">
+  <swiper-item>
+    <scroll-view scroll-view scroll-y='true' class='scroll-box'>
+      <text class='select-date'>{{date}}</text>
+      <template wx:if="{{hotCompanyList.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+      <view wx:key="{{index}}" wx:for="{{hotCompanyList}}" class="{{index>2?'common-card card-other':'common-card'}}" data-type='company' data-name='{{item.name}}' bindtap="tosearch">
+        <view class='common-card-top'>
+          <view class='card-top-left'>
+            <view class='card-top'>{{index + 1}}</view>
+            <view class='card-name'>
+              <text>{{item.name}}</text>
+              <text>{{item.code?'(' + item.code + ')':''}}</text>
+            </view>
+          </view>
+          <view class='card-top-right'>
+            <view class='group-recommend-num'>
+              <image src="{{'../../static/img/icon/group-' + (index>2?'999':'fff') + '.png'}}"></image>
+              <text>{{item.group_num}}</text>
+            </view>
+            <view class='group-recommend-num'>
+              <image src="{{'../../static/img/icon/recommend-' + (index>2?'999':'fff') + '.png'}}"></image>
+              <text>{{item.recommend_num}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='talks-box'>
+          <view class='talks-image'>
+            <image wx:if="{{index>2}}" src='../../static/img/icon/message-black.png'></image>
+            <image wx:if="{{index<=2}}" src='../../static/img/icon/message.png'></image>
+          </view>
+          <view class='talks-people'>
+              {{item.talkers}}{{item.talkersnum>3?'等'+item.talkersnum:item.talkersnum}}人参与了讨论
+          </view>
+        </view>
+      </view>
+      <view class='bottom-space'></view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-view scroll-y='true' class='scroll-box'>
+      <text class='select-date'>{{date}}</text>
+      <template wx:if="{{hotConcept.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+      <view wx:key="{{index}}" wx:for="{{hotConcept}}" class="{{index>2?'common-card card-other':'common-card concept-card'}}" data-type='company' data-name='{{item.name}}' bindtap="tosearch">
+        <view class='common-card-top'>
+          <view class='card-top-left'>
+            <view class='card-top'>{{index + 1}}</view>
+            <view class='card-name'>
+              <text>{{item.name}}</text>
+              <text>{{item.code?'(' + item.code + ')':''}}</text>
+            </view>
+          </view>
+          <view class='card-top-right'>
+            <view class='group-recommend-num'>
+              <image src="{{'../../static/img/icon/group-' + (index>2?'999':'fff') + '.png'}}"></image>
+              <text>{{item.group_num}}</text>
+            </view>
+            <view class='group-recommend-num'>
+              <image src="{{'../../static/img/icon/recommend-' + (index>2?'999':'fff') + '.png'}}"></image>
+              <text>{{item.recommend_num}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='talks-box'>
+          <view class='talks-image'>
+            <image wx:if="{{index>2}}" src='../../static/img/icon/message-black.png'></image>
+            <image wx:if="{{index<=2}}" src='../../static/img/icon/message.png'></image>
+          </view>
+          <view class='talks-people'>
+              {{item.talkers}}{{item.talkersnum>3?'等'+item.talkersnum:item.talkersnum}}人参与了讨论
+          </view>
+        </view>
+      </view>
+      <view class='bottom-space'></view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+  <scroll-view scroll-view scroll-y='true' class='scroll-box'>
+      <text class='select-date'>{{date}}</text>
+      <template wx:if="{{analystsList.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+      <view wx:key="{{item.record_id}}" wx:for="{{analystsList}}" class="{{index>2?'swiper-common swiper-two':'swiper-common swiper-two an-card-top'}}">
+        <view class='s-top-common s-top-two'>
+          <view class='an-title'>
+            {{item.tags[0] || '分析师'}}
+          </view>
+          <view class='an-body'>
+            <view class='an-info' data-name="{{item.name}}" data-group="{{item.group}}" data-name="{{item.name}}" data-tag="{{item.tags[0]}}" data-avatar="{{item.avatar}}" bindtap='toanalyst'>
+              <image src='{{item.avatar}}' class='an-head'></image>
+              <view class='an-name-box'>
+                <image wx:if="{{index<=2}}" class='fire-top' src="{{'../../static/img/icon/an-top-'+ (index+1) +'.png'}}"></image>
+                <text class='an-name'>{{item.name}}</text>
+              </view>
+              <text class='an-from'>{{item.group}}</text>
+            </view>
+            <view class='an-talk' data-name='{{item.name}}' data-record_id='{{item.record_id}}' data-group_id='{{item.group_id}}' bindtap='toViewpoint'>
+              {{item.view || item.content}}
+            </view>
+          </view>
+          <view class='s-bottom'>
+            {{item.update_time}} 更新
+          </view>
+        </view>
+      </view>
+      <view class='bottom-space'></view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

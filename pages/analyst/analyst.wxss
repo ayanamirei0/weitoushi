@@ -1,0 +1,59 @@
+@import '../../components/search-card/search-card.wxss';
+.an-header{
+  width: 100%;
+  height: 233rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom,#8BA1E3,#3D6EB6);
+}
+.photo{
+  width: 153rpx;
+  height: 153rpx;
+  border-radius: 100%;
+  margin-right: 50rpx;
+  float: left;
+  margin-left:40rpx;
+  margin-top:40rpx;
+}
+.an-info{
+  width: 465rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+.info-title{
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 36rpx;
+}
+.info-bottom{
+  height: 91rpx;
+}
+.bottom-card{
+  float: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.bottom-card text{
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+}
+.bottom-line{
+  width: 3rpx;
+  height: 64rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+  float: left;
+  margin: 13rpx 50rpx 0;
+}
+.an-scroll{
+  position: absolute;
+  top: 233rpx;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,42 @@
+<view class='page'>
+  <view class='sendman' wx:if="{{type==='default'}}">
+    {{item.send_user}}：
+  </view>
+  <view class='event-title' wx:if="{{type==='event'}}">
+    {{item.detail.event_detail.title}}
+  </view>
+  <view class='message' wx:if="{{type==='default' || type==='viewpoint'}}">
+    <text selectable>{{item.detail.content}}</text>
+  </view>
+  <view class='message' wx:if="{{type==='event'}}">
+    <view class='event-list'>
+      <view>主办方：</view>
+      <text selectable>{{item.detail.event_detail.sponsor || '未知'}}</text>
+    </view>
+    <view class='event-list'>
+      <view>时间：</view>
+      <text selectable>{{item.detail.event_detail.start_time || '未知'}}</text>
+    </view>
+    <view class='event-list'>
+      <view>地点：</view>
+      <text selectable>{{item.detail.event_detail.place || '未知'}}</text>
+    </view>
+    <view class='event-list'>
+      <view>内容：</view>
+      <text selectable>{{item.detail.event_detail.content}}</text>
+    </view>
+  </view>
+  <!-- 原文链接  -->
+  <text selectable class='link-from' wx:if="{{item.type==='link'}}">原文链接：</text>
+  <view class='type-file' wx:if="{{item.type==='link'}}" data-url="{{item.detail.url}}" bindtap='openlink'>
+    <image src='../../static/img/file/link.png'></image>
+    <view class='type-file-right'>
+      <text selectable>{{item.detail.title}}</text>
+      <text selectable class='type-file-right-bottom'>{{item.detail.url}}</text>
+    </view>
+  </view>
+  <view class='other-info'>
+    <text selectable>来源：{{item.group_name}}</text>
+    <text selectable>{{item.receive_time}}</text>
+  </view>
+</view>

@@ -1,0 +1,260 @@
+@import '../../components/event-card/event-card.wxss';
+.tp-wrp{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.wrp_close{
+  height: 98rpx;
+}
+.wrp_open{
+  height: 628rpx;
+}
+.esc-open{
+  top: 628rpx;
+}
+.esc-close{
+  top: 98rpx;
+}
+.date-wrapper{
+  margin-top: 98rpx;
+}
+.time-selectbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 98rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #f6f6f6;
+  padding: 0 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-date{
+  color: #999;
+  font-size: 28rpx;
+}
+.select-icon{
+  display: flex;
+  align-items: center;
+}
+.select-icon image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 25rpx;
+}
+.select-icon text{
+  color: #3A6BB1;
+  font-size: 28rpx;
+}
+.event-scroll-content{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* 日历  */
+/* pages/calendar/calendar.wxss */
+.top-handle {
+    height: 80rpx;
+    justify-content: space-between;
+    padding:  0 30rpx;
+}
+.prev {
+    text-align: right;
+    height: 80rpx;
+}
+.next {
+    height: 80rpx;
+}
+.prev-handle {
+  color: #3A6BB1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rpx;
+}
+.next-handle {
+  color: #3A6BB1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rpx;
+}
+.date-area {
+    width: 100%;
+    height: 80rpx;
+    color: #3A6BB1;
+    text-align: center;
+}
+.date-area-box{
+  width: 60%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+.weeks {
+    height: 50rpx;
+    line-height: 50rpx;
+    opacity: 0.65;
+}
+.week {
+    text-align: center;
+    color: #000;
+}
+.days {
+    height: 400rpx;
+}
+.grid {
+    width: 107.1428571429rpx;
+}
+.day {
+    width: 60rpx;
+    height: 60rpx;
+    color: rgba(153, 153, 153, 1);
+    font-size: 26rpx;
+    position: relative;
+}
+.point{
+  height: 8rpx;
+  width: 8rpx;
+  background-color: #3A6BB1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5rpx;
+  left: 50%;
+  margin-left: -4rpx;
+}
+.pink-bg .point{
+  display: none;
+}
+.border-radius {
+    border-radius: 50%;
+    color: #fff;
+}
+.pink-bg {
+  background-color: #3A6BB1;
+}
+.purple-bg {
+    background-color: #b8b8f1;
+}
+
+.right-triangle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-left-color: #ff629a;
+    position: absolute;
+    right: -22rpx;
+    top: 18rpx;
+}
+.left-triangle::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-right-color: #ff629a;
+    position: absolute;
+    left: -22rpx;
+    top: 18rpx;
+}
+.tips {
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.types {
+    background-color: #ffedf4;
+    height: 50rpx;
+}
+.type-dot {
+    width: 25rpx;
+    height: 25rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.type-dot-ymq {
+    color:#FF7CA0;
+    background-color: #FF7CA0;
+}
+.type-dot-ycq {
+    color: rgb(255, 200, 202);
+    background-color: rgb(255, 200, 202);
+}
+.type-dot-aqq {
+    color: rgb(118, 191, 92);
+    background-color: rgb(118, 191, 92);
+}
+.type-dot-yyq {
+    color: #FF7CA0;
+    background-color: #FF7CA0;
+}
+.type-dot-plr {
+    color: rgb(211, 189, 215);
+    background-color: rgb(211, 189, 215);
+}
+.types-desc {
+    padding: 0 20rpx;
+}
+.type-name {
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+}
+.type-desc {
+    padding: 0 35rpx;
+    line-height: 38rpx;
+}
+.explain {
+    border-top: 1rpx solid #f6f6f6;
+    width: 90%;
+    margin: 20rpx 5% 20rpx 5%;
+    padding: 20rpx 0;
+}
+.explain-title {
+    font-weight: bold;
+    margin-bottom: 15rpx;
+}
+.explain-item {
+    padding: 8rpx 20rpx;
+    color: #fff;
+}
+.left-border-radius {
+    border-top-left-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+}
+.right-border-radius {
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+.picker-btns {
+	height: 120rpx;
+	line-height: 120rpx;
+	border-bottom: 1rpx solid #FF7CA0;
+}
+.picker-confirm {
+	margin-right: 50rpx;
+}
+.picker-cancel {
+	margin-left: 50rpx;
+}
+.picker-view {
+	color:#FF7CA0;
+	text-align: center;
+}
+.dir-icon{
+  height: 30rpx;
+  width: 30rpx;
+}
+.dir-icon.left{
+  transform: rotate(180deg);
+}
+.old-point .point{
+  background-color: rgba(216, 216, 216, 1);
+}

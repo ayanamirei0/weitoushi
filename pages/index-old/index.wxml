@@ -1,0 +1,126 @@
+<import src="../../components/nodata/nodata.wxml"/>
+<view class="page">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class='time-selectbar'>
+      <text class='select-date'>{{date}}</text>
+      <view class='select-icon'>
+        <image src='../../static/img/icon/date.png'></image>
+        <text>{{array[index]}}</text>
+      </view>
+    </view>
+  </picker>
+  <view class='index-content'>
+    <!-- 公司  -->
+    <view class='card-wrapper'>
+      <view class='card-title'>
+        最热公司
+      </view>
+      <scroll-view scroll-x='true' class='swiper-box'>
+        <view class='swiper-box-scroll' scroll-x="true">
+          <template wx:if="{{hotCompanyList.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+          <view wx:key="{{index}}" wx:for="{{hotCompanyList}}" class="{{index>2?'swiper-common swiper-one card-other':'swiper-common swiper-one'}}">
+            <view class='s-top-common s-top-one' data-type='company' data-name='{{item.name}}' bindtap="tosearch">
+              <image wx:if="{{index===0}}" class='card-bg' src='../../static/img/index/card-1-1.png'></image>
+              <image wx:if="{{index===1}}" class='card-bg' src='../../static/img/index/card-1-2.png'></image>
+              <image wx:if="{{index===2}}" class='card-bg' src='../../static/img/index/card-1-3.png'></image>
+              <image wx:if="{{index>2}}" class='card-bg' src='../../static/img/index/card-other.png'></image>
+              <view class='card-index'>
+                {{index + 1}}
+              </view>
+              <view class='keyword-box'>
+                <text>{{item.name}}</text>
+                <text>{{item.code?'(' + item.code + ')':''}}</text>
+              </view>
+              <view class='talks-box'>
+                <view class='talks-image'>
+                  <image wx:if="{{index>2}}" src='../../static/img/icon/message-black.png'></image>
+                  <image wx:if="{{index<=2}}" src='../../static/img/icon/message.png'></image>
+                </view>
+                <view class='talks-people'>
+                   {{item.talkers}}等{{item.talkersnum}}人参与了讨论
+                </view>
+              </view>
+            </view>
+            <view class='s-bottom'>
+              {{item.group_num}}个群，{{item.recommend_num}}次推荐
+            </view>
+          </view>
+          <!-- 写不上padding 放个这玩意吧 -->
+          <view class='right-padding'></view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 概念  -->
+    <view class='card-wrapper'>
+      <view class='card-title'>
+        最热概念
+      </view>
+      <scroll-view scroll-x='true' class='swiper-box'>
+        <view class='swiper-box-scroll' scroll-x="true">
+          <template wx:if="{{hotConcept.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+          <view wx:key="{{index}}" wx:for="{{hotConcept}}" class="{{index>2?'swiper-common swiper-one card-other':'swiper-common swiper-one'}}">
+            <view class='s-top-common s-top-one' data-type='concept' data-name='{{item.name}}' bindtap="tosearch">
+              <image wx:if="{{index===0}}" class='card-bg' src='../../static/img/index/card-2-1.png'></image>
+              <image wx:if="{{index===1}}" class='card-bg' src='../../static/img/index/card-2-2.png'></image>
+              <image wx:if="{{index===2}}" class='card-bg' src='../../static/img/index/card-2-3.png'></image>
+              <image wx:if="{{index>2}}" class='card-bg' src='../../static/img/index/card-other-2.png'></image>
+              <view class='card-index card-index-two'>
+                {{index + 1}}
+              </view>
+              <view class='keyword-box'>
+                <text>{{item.name}}</text>
+              </view>
+              <view class='talks-box'>
+                <view class='talks-image'>
+                  <image wx:if="{{index>2}}" src='../../static/img/icon/message-black.png'></image>
+                  <image wx:if="{{index<=2}}" src='../../static/img/icon/message.png'></image>
+                </view>
+                <view class='talks-people'>
+                   {{item.talkers}}等{{item.talkersnum}}人参与了讨论 
+                </view>
+              </view>
+            </view>
+            <view class='s-bottom'>
+              {{item.group_num}}个群，{{item.recommend_num}}次推荐
+            </view>
+          </view>
+          <!-- 写不上padding 放个这玩意吧 -->
+          <view class='right-padding'></view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 分析师观点  -->
+    <view class='card-wrapper'>
+      <view class='card-title'>
+        明星分析师观点
+      </view>
+      <scroll-view scroll-x='true' class='swiper-box'>
+        <view class='swiper-box-scroll' scroll-x="true">
+          <template wx:if="{{analystsList.length===0}}" is="noData" data="{{value:'暂无内容~'}}"/>
+          <view wx:key="{{item.record_id}}" wx:for="{{analystsList}}" class="swiper-common swiper-two">
+            <view class='s-top-common s-top-two'>
+              <view class='an-title'>
+                {{item.tags[0] || '分析师'}}
+              </view>
+              <view class='an-body'>
+                <view class='an-info' data-name="{{item.name}}" data-group="{{item.group}}" data-name="{{item.name}}" data-tag="{{item.tags[0]}}" data-avatar="{{item.avatar}}" bindtap='toanalyst'>
+                  <image src='{{item.avatar}}'></image>
+                  <text class='an-name'>{{item.name}}</text>
+                  <text class='an-from'>{{item.group}}</text>
+                </view>
+                <view class='an-talk' data-name='{{item.name}}' data-record_id='{{item.record_id}}' data-group_id='{{item.group_id}}' bindtap='toViewpoint'>
+                  {{item.view || item.content}}
+                </view>
+              </view>
+            </view>
+            <view class='s-bottom'>
+              {{item.update_time}} 更新
+            </view>
+          </view>
+          <!-- 写不上padding 放个这玩意吧 -->
+          <view class='right-padding'></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

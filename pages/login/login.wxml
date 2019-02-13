@@ -1,0 +1,17 @@
+<view class="page">
+  <view class="login-wrapper">
+    <image class='logo' src='../../static/img/logo-blue.png'></image>
+    <view class="input-box">
+      <image src='../../static/img/icon/user.png'></image>
+      <input placeholder-class="phcolor" class="login-input" placeholder="账户" value="{{username}}" bindinput="changeUsername"/>
+    </view>
+    <view class="input-box">
+      <image src='../../static/img/icon/password.png'></image>
+      <input placeholder-class="phcolor" class="login-input" placeholder="密码" password='true' value="{{password}}" bindinput="changePwd"/>
+    </view>
+    <button class="login-btn" type="primary" loading="{{loginIng}}" bindtap="loginHandle" disabled="{{noUseLogin}}">
+      <text class='login-btn-text'>登 录</text>
+    </button>
+    <image class='wechat' bindtap='loginByWechat' src='../../static/img/icon/wechat.png'></image>
+  </view>
+</view>

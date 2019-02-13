@@ -1,0 +1,74 @@
+<!-- <import src="../../components/footer-bar/index.wxml" /> -->
+<view class="page">
+    <view class='index-header'>
+        <view class='h-list-wrapper'>
+            <block wx:for="{{headerList}}" wx:key="{{item.key}}">
+                <view class='h-list-item' data-tapkey="{{item.key}}" bindtap="changeTab">
+                    <text>{{item.title}}</text>
+                    <view hidden="{{item.key!==activeTabKey}}"></view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class='index-body'>
+        <block wx:for="{{list}}" wx:key="{{list}}">
+            <view class='list-card'>
+                <view class='list-card-body'>
+                    <view class='title'>
+                        <text class='c-name' wx:if="{{item.alg_security_name!=null}}">{{item.alg_security_name}}</text> {{item.title}}</view>
+                    <text class='c-text'>{{item.summary}}</text>
+                </view>
+                <view class='list-label'>
+                    <text wx:if="{{item.stockname!=null}}">{{item.stockname}}</text>
+                    <text wx:if="{{item.stockname!=null}}">|</text>
+                    <text wx:if="{{item.industry_name!=null}}">{{item.industry_name}}</text>
+                    <text wx:if="{{item.industry_name!=null}}">|</text>
+                    <text>{{item.report_type}}</text>
+                    <!-- <text class='btn'>{{item.alg_rating}}</text> -->
+                    <image wx:if="{{item.alg_rating=='买入'}}" src="/img/buy.png" class='icon'></image>
+                    <image wx:elif="{{item.alg_rating=='中性'}}" src="/img/neutral.png" class='icon'></image>
+                    <image wx:elif="{{item.alg_rating=='增持'}}" src="/img/overweight.png" class='icon'></image>
+                    <image wx:elif="{{item.alg_rating=='卖出'}}" src="/img/sell.png" class='icon'></image>
+                    <image wx:elif="{{item.alg_rating=='减持'}}" src="/img/underweight.png" class='icon'></image>
+                    <!-- <text wx:elif="{{item.alg_tating=null}}"></text> -->
+                    <text wx:elif="{{item.alg_rating!=null}}">{{item.alg_rating}}</text>
+                </view>
+                <view class='list-card-taps'>
+                    <view class='label'>
+                        <text class='tap-industry' wx:if="{{item.alg_author_name!=null}}">{{item.alg_author_name}}</text>
+                        <!-- <text class='tap-place'>何立中</text> -->
+                        <text class='tap-type' wx:if="{{item.honor !=null}}">{{item.honor}}</text>
+                        <!-- <text class='tap-type'>新财富</text> -->
+                    </view>
+                    <view class='date' wx:if="{{item.alg_publish_date!=null}}">{{item.alg_publish_date}}</view>
+                </view>
+            </view>
+            <view class='line'></view>
+        </block>
+        <!-- <view class='list-card'>
+            <view class='list-card-body'>
+                <view class='title'>
+                    <text class='c-name'>上汽集团</text> 优势壁垒业内无人能及,长期赋予龙头估值溢价</view>
+                <text class='c-text'>公司报告 | 公司深度研究 上汽集团（600104） 证券研究报告 2018年06月20日 投资评级 行业 汽车/汽车整车 6个月评级...</text>
+            </view>
+            <view class='list-label'>
+                <text>海通证券</text>
+                <text>|</text>
+                <text>电子零件制造</text>
+                <text>|</text>
+                <text>公司研究</text>
+                <text class='btn'>买入</text>
+            </view>
+            <view class='list-card-taps'>
+                <view class='label'>
+                    <text class='tap-industry'>高耀华</text>
+                    <text class='tap-place'>何立中</text>
+                    <text class='tap-type'>水晶球</text>
+                    <text class='tap-type'>新财富</text>
+                </view>
+                <view class='date'>2018.09.09</view>
+            </view>
+        </view> -->
+    </view>
+    <!-- <template is="FooterBar" data="{{active: 'index'}}" /> -->
+</view>

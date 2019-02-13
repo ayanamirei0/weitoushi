@@ -1,0 +1,269 @@
+.home-header{
+  height: 98rpx;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+.time-selectbar{
+  height: 98rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #f6f6f6;
+  padding: 0 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-date{
+  color: #999;
+  font-size: 22rpx;
+  line-height: 22rpx;
+  margin: 14rpx 0;
+}
+.select-icon{
+  width: 38rpx;
+}
+.picker-in{
+  padding-top: 8rpx;
+}
+.select-icon image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 25rpx;
+}
+.select-icon text{
+  color: rgba(63, 135, 245, 1);
+  font-size: 28rpx;
+}
+.tab_bar{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 10rpx;
+}
+.tab_bar .bar{
+  font-size: 26rpx;
+  color: #333;
+  border-bottom: 4rpx solid #fff;
+  padding-bottom: 5rpx;
+  margin-right: 35rpx;
+  font-weight: 500;
+}
+.tab_bar .bar.active{
+  border-bottom: 4rpx solid #3A6BB1;
+}
+swiper{
+  position: absolute;
+  top: 98rpx;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: auto;
+}
+swiper-item{
+  text-align: center;
+}
+.scroll-box{
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10rpx;
+}
+/* 占位 */
+.bottom-space{
+  height: 10rpx;
+  width: 100%;
+}
+/* 公司 */
+.common-card{
+  width: 690rpx;
+  height: 194rpx;
+  padding: 24rpx 20rpx;
+  background: linear-gradient(to bottom,#8BA1E3,#3D6EB6);
+  border-radius: 2rpx;
+  box-shadow: 0px 0px 4px 2px rgba(216, 213, 213, 0.5);
+  position: relative;
+  margin: 0 auto 10rpx;
+}
+.common-card-top{
+  display: flex;
+  height: 40rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-top-left{
+  height: 40rpx;
+  display: flex;
+}
+.card-top{
+  height: 40rpx;
+  width: 40rpx;
+  background-color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  color: #6387CC;
+  font-weight: bold;
+}
+.card-name{
+  color: #fff;
+  font-size: 36rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.card-top-right{
+  display: flex;
+}
+.group-recommend-num{
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #fff;
+  margin-left: 25rpx;
+}
+.group-recommend-num image{
+  height: 28rpx;
+  width: 28rpx;
+  margin-right: 10rpx;
+}
+.talks-box{
+  position: absolute;
+  bottom: 20rpx;
+  left: 80rpx;
+  display: flex;
+}
+.talks-image{
+  height: 100%;
+  width: 28rpx;
+}
+.talks-image image{
+  width: 28rpx;
+  height: 28rpx;
+  float: left;
+  margin-top: 7rpx;
+}
+.talks-box .talks-people{
+  flex: 1;
+  line-height: 36rpx;
+  color: #fff;
+  font-size: 24rpx;
+  padding-left: 12rpx;
+}
+.card-other{
+  background: #fff;
+}
+.card-other .group-recommend-num{
+  color: #999;
+}
+.card-other .talks-people{
+  color: #666;
+}
+.card-other .card-top,
+.card-other .card-name{
+  color: #333;
+}
+.card-other .card-top{
+  font-size: 38rpx;
+  font-weight: normal;
+}
+/* 最热概念 */
+.concept-card.common-card{
+  background: linear-gradient(to bottom,#FF8D97,#D54C4D);
+}
+.concept-card .card-top{
+  color: #D54C4D;
+}
+/* 分析师 */
+.s-top-two{
+  width: 690rpx;
+}
+.swiper-two{
+  width: 690rpx;
+  margin: 0 auto 15rpx;
+  box-shadow: 0px 0px 4px 2px rgba(216, 213, 213, 0.5);
+  padding-bottom: 15rpx;
+}
+.an-card-top .an-title{
+  background: linear-gradient(to bottom,#8BA1E3,#3D6EB6);
+  color: #fff;
+} 
+.an-title{
+  height: 75rpx;
+  background: #EDF4FF;
+  border-top-left-radius: 2rpx;
+  border-top-right-radius: 2rpx;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  color: #3A6BB1;
+  border-bottom: 1rpx solid #d8d8d8;
+  font-weight: 500;
+}
+.an-body{
+  height: 275rpx;
+  padding: 30rpx;
+  /* border: 1rpx solid #e6e6e6; */
+  border-top: none;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.an-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 126rpx;
+  float: left;
+  position: relative;
+}
+.an-info .an-head{
+  height: 126rpx;
+  width: 126rpx;
+  border-radius: 50%;
+}
+.an-info .an-name{
+  color: rgba(51, 51, 51, 1);
+  font-size: 32rpx;
+  line-height: 45rpx;
+  margin-top: 10rpx;
+  font-family: PingFangSC-Semibold;
+}
+.an-info .an-from{
+  color: rgba(74, 74, 74, 1);
+  font-size: 24rpx;
+  line-height: 33rpx;
+  margin-top: 5rpx;
+}
+.an-talk{
+  padding-left: 30rpx;
+  line-height: 42rpx;
+  color: rgba(74, 74, 74, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.s-bottom{
+  color: #999;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  height: 32rpx;
+  text-align: right;
+  display: block;
+  padding: 0 40rpx;
+}
+.an-name-box{
+  height:45rpx;
+  line-height:45rpx;
+  margin-top: 10rpx;
+}
+.an-info .fire-top{
+  display: inline-block;
+  height: 23rpx;
+  width: 23rpx;
+  margin-right: 5rpx;
+}

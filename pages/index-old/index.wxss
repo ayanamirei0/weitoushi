@@ -1,0 +1,237 @@
+/**index.wxss**/
+picker{
+  height: 98rpx;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+.time-selectbar{
+  height: 98rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #f6f6f6;
+  padding: 0 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-date{
+  color: #999;
+  font-size: 28rpx;
+}
+.select-icon{
+  display: flex;
+  align-items: center;
+}
+.select-icon image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 25rpx;
+}
+.select-icon text{
+  color: rgba(63, 135, 245, 1);
+  font-size: 28rpx;
+}
+.index-content{
+  width: 100%;
+  padding-top: 98rpx;
+}
+.card-wrapper{
+  padding-bottom: 30rpx;
+  height: 545rpx;
+  /* border-bottom: 1rpx solid #e6e6e6; */
+}
+.card-title{
+  padding: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+.swiper-box{
+  width: 100%;
+  height: 413rpx;
+}
+.swiper-box-scroll{
+  padding: 0 16rpx;
+  width:100%; 
+  height: 100%;
+  display: flex; 
+  display: -webkit-box; 
+  flex-direction: column;
+}
+.swiper-common{
+  height: 413rpx;
+  margin: 0 8rpx;
+  position: relative;
+  padding-top: 4rpx;
+}
+.swiper-one{
+  width: 285rpx;
+}
+.card-other .s-top-common{
+  /* border: 1rpx solid #e6e6e6; */
+}
+.s-top-common{
+  height: 360rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  box-shadow: 0 0 4rpx 4rpx rgba(0,0,0,.07);
+}
+.card-bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -99;
+}
+.s-top-one{
+  width: 285rpx;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+}
+.s-bottom{
+  color: rgba(102, 102, 102, 1);
+  font-size: 24rpx;
+  line-height: 32rpx;
+  display: block;
+  position: absolute;
+  left: 10rpx;
+  top: 375rpx;
+}
+.right-padding{
+  height: 413rpx;
+  width: 16rpx;
+}
+.card-index{
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  line-height: 50rpx;
+  color: rgba(63, 135, 245, 1);
+  font-size: 32rpx;
+  text-align: center;
+  box-shadow: 0 0 2rpx 2rpx rgba(0,0,0,.07);
+}
+.card-other .card-index{
+  color: rgba(221, 221, 221, 1)!important;
+}
+.card-index.card-index-two{
+  color: rgba(247, 193, 142, 1);
+}
+.keyword-box{
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  margin-top: 120rpx;
+}
+.keyword-box text{
+  display: block;
+  line-height: 50rpx;
+  height: 50rpx;
+}
+.card-other .keyword-box{
+  color: #333;
+}
+.card-other .talks-box .talks-people{
+  color: rgba(153, 153, 153, 1);
+}
+.talks-box{
+  position: absolute;
+  bottom: 16rpx;
+  width: 245rpx;
+  height: 72rpx;
+  left: 20rpx;
+  display: flex;
+}
+.talks-image{
+  height: 100%;
+  width: 28rpx;
+}
+.talks-image image{
+  width: 28rpx;
+  height: 28rpx;
+  float: left;
+  margin-top: 8rpx;
+}
+.talks-box .talks-people{
+  flex: 1;
+  line-height: 36rpx;
+  color: #fff;
+  font-size: 24rpx;
+  padding-left: 8rpx;
+}
+/* 分析师  */
+.s-top-two{
+  width: 558rpx;
+}
+.swiper-two{
+  width: 558rpx;
+}
+.an-title{
+  height: 70rpx;
+  background-color: #3F87F5;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding: 0 30rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Medium;
+  color: #fff;
+}
+.an-body{
+  height: 290rpx;
+  padding: 30rpx;
+  /* border: 1rpx solid #e6e6e6; */
+  border-top: none;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.an-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 126rpx;
+  float: left;
+}
+.an-info image{
+  height: 126rpx;
+  width: 126rpx;
+  border-radius: 50%;
+}
+.an-info .an-name{
+  color: rgba(51, 51, 51, 1);
+  font-size: 32rpx;
+  line-height: 45rpx;
+  margin-top: 10rpx;
+  font-family: PingFangSC-Semibold;
+}
+.an-info .an-from{
+  color: rgba(74, 74, 74, 1);
+  font-size: 24rpx;
+  line-height: 33rpx;
+  margin-top: 10rpx;
+  font-family: PingFangSC-Semibold;
+}
+.an-talk{
+  width: 370rpx;
+  padding-left: 30rpx;
+  line-height: 42rpx;
+  color: rgba(74, 74, 74, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}

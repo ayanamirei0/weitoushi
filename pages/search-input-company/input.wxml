@@ -1,0 +1,27 @@
+<!--pages/search-input-company/input.wxml-->
+<view>
+    <view class='header'>
+        <input></input>
+        <text>取消</text>
+    </view>
+    <view class='main'>
+        <view>
+            <view class='history'>公司</view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>海康威视（800246）</text>
+            </view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>海康在线（800211）</text>
+            </view>
+        </view>
+        <view>
+            <view class='history'>分析师</view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>王海康</text>
+            </view>
+        </view>
+    </view>
+</view>

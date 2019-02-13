@@ -1,0 +1,186 @@
+/* pages/index/index.wxss */
+@import '../../components/footer-bar/index.wxss';
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.index-header {
+    height: 88rpx;
+    width: 100%;
+    background-color: #0073b1;
+    padding: 0 34rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.index-body {
+    position: absolute;
+    top: 88rpx;
+    bottom: 100rpx;
+    width: 100%;
+    background-color: #f3f4f7;
+}
+
+.index-body .group-title {
+    height: 90rpx;
+    padding: 18rpx 32rpx;
+    font-size: 40rpx;
+    color: #333;
+}
+
+.list-card {
+    background-color: #fff;
+    padding: 32rpx 34rpx 26rpx 32rpx;
+}
+
+.list-card-body {
+    font-size: 32rpx;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.list-card-taps {
+    display: flex;
+    align-items: center;
+}
+
+.tap-type {
+    height: 36rpx;
+    padding: 2rpx 12rpx;
+    font-size: 10px;
+    line-height: 30rpx;
+    text-align: center;
+    border: 1rpx solid #F06C6C;
+    border-radius: 4rpx;
+    color: #F06C6C;
+}
+
+.tap-line {
+    height: 20rpx;
+    margin: 0 20rpx;
+    width: 2rpx;
+    background-color: #ddd;
+}
+
+.tap-industry {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 24rpx;
+}
+
+.tap-place {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 24rpx;
+}
+
+.list-card-body .c-time {
+    color: #000;
+    margin-right: 16rpx;
+}
+
+.list-card-body .c-name {
+    color: #287ddc;
+    margin-right: 16rpx;
+}
+
+.list-card-body .c-text {
+    /* margin-top: 22rpx; */
+    color: #666;
+    font-size: 12px;
+    /* 多行文本显示省略号 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.h-list-wrapper {
+    height: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.h-list-item {
+    /* display: inline-block; */
+    height: 100%;
+    margin-right: 38rpx;
+    padding: 10rpx 0;
+}
+
+.h-list-item text {
+    color: #fff;
+    font-size: 32rpx;
+}
+
+.h-list-item view {
+    height: 4rpx;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+/* 李宏亮 修改添加 */
+/* .index-body .list-label {
+    margin-top: 12rpx;
+} */
+.index-body .list-label .btn{
+    display: inline-block;
+    color: #ffffff;
+    background-color: #E3616B;
+    border: 1px solid #E3616B;
+    width: 100rpx;
+    height: 32rpx;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 3px;
+}
+.index-body .list-label text {
+    margin-right: 16rpx;
+    color: #666;
+    font-size: 12px;
+}
+.index-body .list-label .icon{
+    width: 72rpx;
+    height: 32rpx;
+    vertical-align: middle;
+}
+.index-body .list-card-taps .label text{
+    margin-right: 16rpx;
+}
+.index-body .list-card-taps{
+    display: flex;
+    justify-content: space-between;
+}
+.index-body .list-card-taps .date{
+    color: #666666;
+    font-size: 12px;
+    margin-top: 12rpx;
+
+}
+.page .index-header{
+    width: 750rpx;
+    height: 88rpx;
+    padding-bottom: 20rpx;
+    overflow: hidden;
+}
+.page .index-header .h-list-wrapper{
+    height: 116rpx;
+}
+.index-body .line{
+    width: 100%;
+    height: 12rpx;
+    background-color: #F3F4F7;
+}

@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search-input/input",
+    "pages/search-input-company/input",
+    "pages/search-reult-filelink/link",
+    "pages/search-result/result",
+    "pages/search-input-rate/input",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/event/event",
+    "pages/analyst/analyst"
+    ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#0073B1",
+    "navigationBarTitleText": "微透视",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color": "#666666",
+    "selectedColor": "#0077D1",
+    "borderStyle": "white",
+    "list": [
+        {
+            "iconPath": "img/home.png",
+            "selectedIconPath": "img/home_sel.png",
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },
+        {
+            "iconPath": "img/activity.png",
+            "selectedIconPath": "img/activity_sel.png",
+            "pagePath": "pages/index/index",
+            "text": "活动"
+        },
+        {
+            "iconPath": "img/report.png",
+            "selectedIconPath": "img/report_sel.png",
+            "pagePath": "pages/index/index",
+            "text": "研报"
+        }
+    ]
+  }
+}

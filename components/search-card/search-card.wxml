@@ -1,0 +1,48 @@
+<template name="searchCard">
+    <view class='sc-wrapper'>
+      <view class='sc-body' wx:if="{{type==='text'}}" data-record_id='{{record_id}}' data-group_id='{{group_id}}' bindtap='todetail'>
+        <image class='sc-bg' src="{{'../../static/img/search/search-bg-'+ bgType +'.png'}}"></image>
+        <text class='type-text' >{{detail.content}}</text>
+        <view class='sc-bottom'>
+        <text>来源：{{group_name}}</text>
+          <text>{{receive_time}}</text>
+        </view>
+      </view>
+      <view class='sc-body' wx:if="{{type==='emotion' || type==='image'}}" data-record_id='{{record_id}}' data-group_id='{{group_id}}'>
+        <image class='sc-bg' src="{{'../../static/img/search/search-bg-'+ bgType +'.png'}}"></image>
+        <image src="{{detail.thumb_url}}"></image>
+        <view class='sc-bottom'>
+          <text>来源：{{group_name}}</text>
+          <text>{{receive_time}}</text>
+        </view>
+      </view>
+      <view class='sc-body sc-body-link'  wx:if="{{type==='link'}}" data-url="{{detail.url}}" bindtap='openlink'>
+        <image class='sc-bg' src="{{'../../static/img/search/search-bg-'+ bgType +'.png'}}"></image>
+        <view class='type-file'>
+          <image src='../../static/img/file/link.png'></image>
+          <view class='type-file-right'>
+            <text>{{detail.title}}</text>
+            <text class='type-file-right-bottom'>{{detail.url}}</text>
+          </view>
+        </view>
+        <view class='sc-bottom'>
+          <text>来源：{{group_name}}</text>
+          <text>{{receive_time}}</text>
+        </view>
+      </view>
+      <view class='sc-body sc-body-link' wx:if="{{type==='file'}}" data-url="{{detail.file_url}}" data-type="{{detail.file_type}}" data-size="{{detail.filesize}}" bindtap='openfile'>
+        <image class='sc-bg' src="{{'../../static/img/search/search-bg-'+ bgType +'.png'}}"></image>
+        <view class='type-file'>
+          <image src="{{'../../static/img/file/'+ detail.file_type +'.png'}}"></image>
+          <view class='type-file-right'>
+            <text>{{detail.filename}}</text>
+            <text class='type-file-right-bottom'>{{detail.filesize}} MB</text>
+          </view>
+        </view>
+        <view class='sc-bottom'>
+          <text>来源：{{group_name}}</text>
+          <text>{{receive_time}}</text>
+        </view>
+      </view>
+    </view>
+</template>

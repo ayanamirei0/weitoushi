@@ -1,0 +1,42 @@
+<!--pages/search-input-rate/input.wxml-->
+<view>
+    <view class='header'>
+        <input></input>
+        <text>取消</text>
+    </view>
+    <view class='main'>
+        <view>
+            <view class='history'>评级</view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>增持</text>
+            </view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>买入</text>
+            </view>
+        </view>
+        <view>
+            <view class='history'>机构</view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>Macquarie</text>
+            </view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>Macquarie Group</text>
+            </view>
+        </view>
+        <view>
+            <view class='history'>分析师</view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>Macquarie</text>
+            </view>
+            <view class='list'>
+                <!-- <image src='/img/search-date.png' mode='aspectFill'></image> -->
+                <text>M.G.W</text>
+            </view>
+        </view>
+    </view>
+</view>

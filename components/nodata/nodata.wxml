@@ -1,0 +1,6 @@
+<template name="noData">
+    <view class='nodata-wrp'>
+      <image src='../../static/img/nodata.png'></image>
+      <text>{{value || '暂无内容'}}</text>
+    </view>
+</template>

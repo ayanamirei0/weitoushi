@@ -1,0 +1,31 @@
+<template name="eventCard">
+    <view class='sc-wrapper' data-record_id='{{record_id}}' data-group_id='{{group_id}}' bindtap='todetail'>
+    <view class='sc-wrp-in'>
+        <view class='sc-header'>
+          <image class='city-img' src="{{'../../static/img/city/'+ (city_spelling_inkfile || 'default') +'.png'}}"></image>
+          <view class='event-time'>
+            {{start_time}}
+          </view>
+          <view class='h-midline'></view>
+          <view class='event-address'>
+            <view class='add-icon'>
+              <image src='../../static/img/icon/event-by.png'></image>
+              {{sponsor || '未知'}}
+            </view>
+            <view class='add-icon'>
+              <image src='../../static/img/icon/address.png'></image>
+              {{city || '未知'}}
+            </view>
+          </view>
+        </view>
+        <view class='sc-body'>
+          <view class='event-info'>
+            <text>{{title}}\n{{content}}</text>
+          </view>
+          <view class='from-wp'>
+            <text>来源：{{group_name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>

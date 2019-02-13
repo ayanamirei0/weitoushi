@@ -1,0 +1,45 @@
+.header{
+    background-color: #0073B1;
+}
+.header input{
+    display: inline-block;
+    width: 588rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+    background-color: #2687BC;
+    margin: 34rpx 32rpx 12rpx 32rpx; 
+    vertical-align: middle;
+    padding-left: 22rpx;
+    font-size: 14px;
+    color: #f8f8f8;
+}
+.header text{
+    font-size: 14px;
+    color: #ffffff;
+    display: inline-block;
+    width: 56rpx;
+    height: 42rpx;
+}
+.main .history{
+    margin-top: 46rpx;
+    color: #666666;
+    font-size: 14px;
+    margin-left: 38rpx;
+}
+.main .list{
+    font-size: 14px;
+    margin-left: 40rpx;
+    color: #333333;
+    width: 684rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    margin-top: 28rpx;
+}
+.main .list image{
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+}
+.main .list text{
+    margin-left: 15rpx;
+}

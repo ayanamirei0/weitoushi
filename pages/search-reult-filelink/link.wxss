@@ -1,0 +1,80 @@
+/* pages/search-reult-filelink/link.wxss */
+@import "../../wxParse/wxParse.wxss";
+page{
+    background-color: #F3F4F7;
+}
+.header{
+    background-color: #0073B1;
+    margin-bottom: 20rpx;
+}
+.header input{
+    display: inline-block;
+    width: 610rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 34rpx 32rpx 12rpx 32rpx; 
+    vertical-align: middle;
+}
+.header text{
+    font-size: 14px;
+    color: #ffffff;
+    display: inline-block;
+    width: 56rpx;
+    height: 42rpx;
+}
+
+.main .content-list{
+    padding: 30rpx 36rpx 0 30rpx;
+    background-color: #ffffff;
+    margin-bottom: 12rpx;
+}
+.main .content-list .title{
+    display: flex;
+    justify-content: space-between;
+}
+.main .content-list .title .head image{
+    width: 48rpx;
+    height: 48rpx;
+    vertical-align: middle;
+}
+.main .content-list .title .head text{
+    color: #4A90E2;
+    margin-left: 16rpx;
+    font-size: 14px;
+}
+.main .content-list .date{
+    color: #999999;
+    font-size: 12px;
+    line-height: 54rpx;
+}
+.main .content-list .content{
+    margin-top: 32rpx;
+    color: #333333;
+    font-size: 16px;
+    padding-bottom: 34rpx;
+}
+.main .content-list .content image{
+    width: 680rpx;
+    height: 304rpx;
+}
+.main .content-list .content .sub_title{
+    margin-bottom: 8rpx;
+}
+.main .content-list .content .sub_title image{
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+.main .content-list .content .sub_title .text{
+    display: inline-block;
+    color: #4A90E2;
+}
+.main .content-list .content .describe{
+    /* 多行文本显示省略号 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

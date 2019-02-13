@@ -1,0 +1,51 @@
+<view>
+    <view class='header'>
+        <input></input>
+        <text>取消</text>
+    </view>
+    <view class='main'>
+        <view class='content-list'>
+            <view class='title'>
+                <view class='head'>
+                    <image src='/img/search-date.png'></image>
+                    <text>海康威视</text>
+                </view>
+                <text class='date'>2018-02-26 22:15</text>
+            </view>
+            <view class='content'>
+                美宣布造出世界最强大海康威视运算速度20亿次,一个是李克强总理在国务院会议上要求，研究
+                部署的小微企业融资政策要尽快…
+            </view>
+        </view>
+        <view class='content-list'>
+            <view class='title'>
+                <view class='head'>
+                    <image src='/img/search-date.png'></image>
+                    <text>李俊华</text>
+                </view>
+                <text class='date'>2018-02-26 22:15</text>
+            </view>
+            <view class='content'>
+                <view class='sub_title'>
+                    <image src='/img/search-date.png'></image>
+                    <view class='text'>海康威视日报： 行业新闻 </view>
+                </view>
+                美宣布造出世界最强大海康威视运算速度20亿次,一个是李克强总理在国务院会议上要求，研究
+                部署的小微企业融资政策要尽快…
+            </view>
+        </view>
+        <view class='content-list'>
+            <view class='title'>
+                <view class='head'>
+                    <image src='/img/search-date.png'></image>
+                    <text>徐文静</text>
+                </view>
+                <text class='date'>2018-02-26 22:15</text>
+            </view>
+            <view class='content'>
+                1.美宣布造出世界最强大海康威视运算速度…
+                <image src='/img/notebook.png'></image>
+            </view>
+        </view>
+    </view>
+</view>

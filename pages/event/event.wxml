@@ -1,0 +1,49 @@
+<import src="../../components/event-card/event-card.wxml"/>
+<import src="../../components/nodata/nodata.wxml"/>
+<view class="{{showPicker?'tp-wrp wrp_open':'tp-wrp wrp_close'}}">
+  <view class='time-selectbar' bindtap='switchDate'>
+    <text class='select-date'>{{choseItem.date}}</text>
+    <view class='select-icon'>
+      <image src='../../static/img/icon/date.png'></image>
+      <text>选择时间</text>
+    </view>
+  </view>
+  <view wx:if="{{showPicker}}" class="flex box box-tb box-align-center date-wrapper">
+    <view class="calendar pink-color box box-tb">
+      <view class="top-handle fs28 box box-lr box-pack-center">
+        <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+          <view class="prev-handle box box-lrbox-align-center box-pack-center">
+            <image src='../../static/img/icon/dir.png' class='dir-icon left'></image>
+          </view>
+        </view>
+        <picker mode="date" class='date-area-box' value='{{startPickDate}}' start="1999-01" end="2050-12" fields="month" bindchange="chooseYearAndMonth">
+          <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+        </picker>
+        <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+          <view class="next-handle box box-lr box-align-center box-pack-center">
+            <image src='../../static/img/icon/dir.png' class='dir-icon right'></image>
+          </view>
+        </view>
+      </view>
+      <view class="weeks box box-lr box-pack-center box-align-center">
+        <view class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+      </view>
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
+          <view class="day {{item.choosed ? 'border-radius pink-bg' : ''}} box box-align-center box-pack-center {{item.old ? 'old-point' : ''}}">
+            {{item.day}}
+            <view class='point' wx:if="{{!!item.events}}"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y class="{{showPicker?'event-scroll-content esc-open':'event-scroll-content esc-close'}}">
+  <template wx:if="{{!choseItem.events}}" is="noData" data="{{value:'今日无活动~'}}"/>
+  <block wx:for="{{choseItem.events}}" wx:key="{{item.record_id}}">
+    <template is="eventCard" data="{{...item}}"/>
+  </block>
+</scroll-view> 

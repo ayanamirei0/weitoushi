@@ -1,0 +1,27 @@
+<view>
+    <view class='header'>
+        <form>
+            <input bindblur="setStorageInput"></input>
+            <!-- <icon type='search' size='18' bindtap='setStorageInput'></icon> -->
+            <text>取消</text>
+        </form>
+    </view>
+    <view class='main'>
+        <view class='history'>搜索历史</view>
+        <block wx:for="{{search_history}}" wx:key="key">
+            <view class='list' wx:if="{{item!=''}}">
+                <image src='/img/search-date.png' mode='aspectFill'></image>
+                <text>{{item}}</text>
+            </view>
+        </block>
+
+        <!-- <view class='list'>
+            <image src='/img/search-date.png' mode='aspectFill'></image>
+            <text>截至2017年12月31日止年度全年业绩公告</text>
+        </view>
+        <view class='list'>
+            <image src='/img/search-date.png' mode='aspectFill'></image>
+            <text>金融数据点评</text>
+        </view> -->
+    </view>
+</view>
